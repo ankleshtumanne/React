@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start React</title>
+    <style>
+        #container{
+            border: 1px solid red;
+            display: flex;
+            width: 100%;
+            height: 200px;
+            background-color: aqua;
+           
+        }
+        
+        #container>div{
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+            align-items: center;
+            /* padding-top: 60px; */
+            margin: 10px;
+            margin-top: 50px;
+        }
+        #container>div#child1{
+            background-color: red;
+            margin-left: 200px;
+        }
+        .child2{
+            background-color: yellow;
+        }
+        .child3{
+            background-color: green;
+        }
+        .child4{
+             background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Start React With Me </h1> -->
+    <div id="root">
+        <!-- hello world -->
+    </div>
+
+</body>
+</html>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    const root=document.getElementById("root");
+    const rootElement=ReactDOM.createRoot(root)
+
+    let props={
+        border:"1px solid red ",
+        display:'flex',
+        fontWeigth:'bold'
+    }
+
+    const flex=React.createElement("div",{id:"container",style:props},"Anklesh",[
+        React.createElement("div",{id:"child1"},"1"),
+        React.createElement("div",{className:"child2"},"2"),
+        React.createElement("div",{className:"child3"},"3"),
+        React.createElement("div",{className:"child4"},"4")
+    ])
+    rootElement.render(flex)
+</script>
