@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #root{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            padding-left:30px;
+            
+        }
+    </style>
+</head>
+<body> 
+    <!--  dont touch these part -->
+    <div id="root"></div>  
+</body>
+</html>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    //  using create elements create 1 div and inside div atke 4 more div ************************************
+
+    const root=ReactDOM.createRoot(document.getElementById("root"))
+
+    // const rootE=React.createElement("div",{id:"container",className:"main"},"",[
+    //     // React.createElement("img",{className:"img"},"poster"),
+    //     React.createElement("h3",{className:"name"},"Learning react"),
+    //     React.createElement("p",{className:"name"},"day 2"),
+    //     React.createElement("button",{className:"name"},"click me"),
+    //     // React.createElement("p",{className:"name"},"ankushi")
+    // ])
+    // import React from 'react';
+
+
+     // using jsx create a flex bot and inside div take four more div  **************************************
+
+    function MyComponent() {
+        // const parentDivStyle = {         // stilling part
+        //     border: '2px solid #333',
+        //     padding: '10px',
+        //     marginBottom: '20px',
+        // };
+        // const childDivStyle = {
+        //     background: '#eee',
+        //     margin: '5px',
+        //     padding: '8px',
+        // };
+        return (
+            <div style={parentDivStyle}>
+            {/* Parent div */}
+                <div style={childDivStyle} className="child-div">Child 1</div>
+                <div style={childDivStyle} className="child-div">Child 2</div>
+                <div style={childDivStyle} className="child-div">Child 3</div>
+                <div style={childDivStyle} className="child-div">Child 4</div>
+            </div>
+        );
+    }
+
+
+        // export default MyComponent;
+
+
+    root.render(MyComponent())
+</script>

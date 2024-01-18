@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+  </head>
+  <body>
+    <div id="root">hello</div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your task starts here
+    const root=document.getElementById("root")
+    const element=ReactDOM.createRoot(root)
+    
+   
+    function App(){
+        const [count,setState]=React.useState(0)
+        const Greeting=()=>{
+            setState(count+1)
+        }
+        return (
+            <>
+               
+                <p>hello , react my name is om {count} </p>
+                <button onClick={Greeting} >Click me</button>
+            </>
+        )
+    }
+    element.render(<App/>)
+  </script>
+</html>

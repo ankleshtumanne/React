@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>components</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    // const root=document.getElementById("root")
+    // const element=ReactDOM.createRoot(root)
+    // function Greet(props) {
+    //     return (
+    //         <p>
+    //            hello developers {props.text} {props.name}
+    //         </p>
+    //     );
+    //     }
+
+    // function App() {
+    //     return (
+    //         <div className="container">
+    //         <Greet text="Happy Birthday" name="Bruce" />
+    //         <Greet text="Good Morning" name="Rachel" />
+    //         </div>
+    //     );
+    // }
+    // const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+
+    // reactRoot.render(<App />);
+
+    //********************** Another question *********************************************
+    // const Message=function(props){
+    //     return (
+    //         <div>
+    //             hello everyone my name is {props.name} AND THE AGE OF {props.age}
+    //         </div>
+    //     );
+    // };
+
+    // const flex=(
+    //     <>
+    //         <Message name="anklesh" age="22" />
+    //     </>
+    // )
+            
+    // const rootElement=ReactDOM.createRoot(document.getElementById("root"))
+    // rootElement.render(flex)
+   
+    // Task 4 : Create a react component called Greeting;
+        // `Greeting`` component should have
+
+        // h1 with text "Hello"
+        // p with text ; name of the person should come from prop;
+        // 3 components Greeting with different personName prop
+
+    function Greeting(props){
+        return (
+            <>
+                <h1> {props.text} {props.name} </h1>
+                
+            </>
+        )
+    }
+    function App(){
+        return (
+            <div>
+               <Greeting text="Hello" name="anklesh" />  
+               <Greeting text="Hello" name="ramesh" />  
+               <Greeting text="Hello" name="mahesh" />  
+            </div>
+        )
+    }
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(<App/>);
+</script>
+
+</html>

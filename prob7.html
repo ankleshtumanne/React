@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+  </head>
+  <body>
+    <div id="root">hello</div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your task starts here
+    const root=document.getElementById("root")
+    const element=ReactDOM.createRoot(root)
+
+    // function Conditionals(items){
+    //     if(items.length==0){
+    //         return <p> no items found <p/>
+    //     }else{
+    //         <ul>
+    //             <li>
+    //                 items.map((ele)=>{
+    //                     return ele
+    //                 })    
+    //             </li>    
+    //         </ul>
+    //     }
+    // }
+
+    const ItemList=({items})=>{
+        return (
+            <>
+             <h1>My Answers</h1>
+              {items.length==0 ? <p>No items found</p> : <ul>{items.map((ele)=>{
+                        return  (
+                            <ul>
+                                <li>{ele} </li>
+                            </ul>
+                        )
+                    })}
+                </ul>
+            }
+            </>
+        )
+    }
+    function App(){
+        return (
+            <>
+                <ItemList items={["Apple", "Banana", "Cherry"]} />
+            </>
+        )
+    }
+    element.render(<App/>)
+  </script>
+</html>

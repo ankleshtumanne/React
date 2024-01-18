@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>React buttons</title>
+    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="root">helo</div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    
+  </body>
+  <script type="text/babel">
+    const root=document.getElementById("root")
+    const element=ReactDOM.createRoot(root)
+    const Header=({title})=>{
+        return (
+                <>
+                    <p> {title}  </p>
+                </>
+        )
+    }
+
+    const Footer=({year})=>{
+        return (
+            <>
+               <p>{year} </p>
+                
+            </>
+        )
+    }
+    
+    const Content=({text_content})=>{
+        return (
+            <>
+                <p>{text_content}</p>
+            </>
+        )
+    }
+
+    function App(){
+        return (
+            <>
+                <Header title="hello react" />
+                <Content text_content="my name is lakhan" />
+                <Footer  year="2022" />
+            </>
+        )
+    }
+    element.render(<App/>)
+ </script>
